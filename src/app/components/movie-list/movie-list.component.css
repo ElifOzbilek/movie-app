@@ -1,0 +1,21 @@
+.card {
+    position: relative;
+    border: none;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 25px !important;
+  }
+  .nav-tabs .nav-link.active{
+    color: white;
+    border: none;
+    background-color: #242A32;
+    border-bottom: 5px solid grey;
+  }
+  .nav-tabs .nav-link{
+    color: white;
+    font-size: 26px;
+  }
+  .nav-tabs {
+    --bs-nav-tabs-border-color: none !important;
+}
+ 

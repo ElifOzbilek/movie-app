@@ -1,20 +1,24 @@
 .card {
     position: relative;
     border: none;
+    border-radius: 15px;
+
   }
   
   .card-text-overlay {
-    font-size: 120px;
+    font-size: 140px;
     position: absolute;
-    bottom: -50px;
-    left: -30px;
+    bottom: -70px;
+    left: -15px;
     padding: 5px 10px;
     border-radius: 5px;
   
   }
+
   span{
     color: white;
   }
-.text{
-  border: 2px solid red;
+.listId{
+  color: #1E1E1E;
+
 }

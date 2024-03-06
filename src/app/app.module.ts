@@ -8,6 +8,9 @@ import { SearchComponent } from './pages/search/search.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -15,15 +18,20 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SearchComponent,
     DetailsComponent,
-    BannerComponent
+    BannerComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
+
+  
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,57 @@
+<div class="p-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="now-tab" data-bs-toggle="tab" data-bs-target="#now-tab-pane" type="button" role="tab" aria-controls="now-tab-pane" aria-selected="true">Now Playing</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="upComing-tab" data-bs-toggle="tab" data-bs-target="#upComing-tab-pane" type="button" role="tab" aria-controls="upComing-tab-pane" aria-selected="false">Up Coming</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="topRated-tab" data-bs-toggle="tab" data-bs-target="#topRated-tab-pane" type="button" role="tab" aria-controls="topRated-tab-pane" aria-selected="false">Top Rated</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="popular-tab" data-bs-toggle="tab" data-bs-target="#popular-tab-pane" type="button" role="tab" aria-controls="popular-tab-pane" aria-selected="false" >Popular</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="now-tab-pane" role="tabpanel" aria-labelledby="now-tab" tabindex="0">
+            <div class="d-flex flex-wrap mt-3">
+                <div class="row">
+                    <div class="col pe-0 ps-0 me-2" *ngFor="let now of nowPlaying">
+                        <div class="card  mb-3"  style="border-radius: 10px;">
+                            <img [src]="getImageUrl(now.poster_path)" class="movieImage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="tab-pane fade" id="upComing-tab-pane" role="tabpanel" aria-labelledby="upComing-tab" tabindex="0"><span>       <div class="d-flex flex-wrap mt-3">
+            <div class="row">
+                <div class="col pe-0 ps-0 me-2" *ngFor="let up of upComing">
+                    <div class="card  mb-3"  style="border-radius: 10px;">
+                        <img [src]="getImageUrl(up.poster_path)" class="movieImage">
+                    </div>
+                </div>
+            </div>
+        </div></span></div>
+        <div class="tab-pane fade" id="topRated-tab-pane" role="tabpanel" aria-labelledby="topRated-tab" tabindex="0"><span>       <div class="d-flex flex-wrap mt-3">
+            <div class="row">
+                <div class="col pe-0 ps-0 me-2" *ngFor="let top of topRated">
+                    <div class="card  mb-3"  style="border-radius: 10px;">
+                        <img [src]="getImageUrl(top.poster_path)" class="movieImage">
+                    </div>
+                </div>
+            </div>
+        </div></span></div>
+        <div class="tab-pane fade" id="popular-tab-pane" role="tabpanel" aria-labelledby="popular-tab" tabindex="0"><span>       <div class="d-flex flex-wrap mt-3">
+            <div class="row">
+                <div class="col pe-0 ps-0 me-2" *ngFor="let popular of popular">
+                    <div class="card  mb-3"  style="border-radius: 10px;">
+                        <img [src]="getImageUrl(popular.poster_path)" class="movieImage">
+                    </div>
+                </div>
+            </div>
+        </div></span></div>
+      </div>
+</div>

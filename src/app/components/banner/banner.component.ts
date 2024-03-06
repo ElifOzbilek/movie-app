@@ -11,6 +11,7 @@ import { ImageService } from '../../services/image.service';
 export class BannerComponent implements OnInit{
 
  movieList: IMovieList[] = [];
+
 constructor(private service:MovieService, private imageService:ImageService ){}
 
   ngOnInit(): void {
@@ -24,5 +25,4 @@ constructor(private service:MovieService, private imageService:ImageService ){}
   getImageUrl(posterPath: string) {
     return this.imageService.getImageUrl(posterPath);
   }
-
 }

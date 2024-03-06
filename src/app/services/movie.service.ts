@@ -24,10 +24,22 @@ export class MovieService {
 
 movieList: IMovieList | undefined;
 
+
   constructor(private http:HttpClient) { }
 
   getMovies(){
-    return this.http.get<IMovieList>('https://api.themoviedb.org/3/discover/movie', options);
-   
+    return this.http.get<IMovieList>('https://api.themoviedb.org/3/discover/movie', options); 
+  }
+  getNowPlaying(){
+    return this.http.get<IMovieList>('https://api.themoviedb.org/3/movie/now_playing',options)
+  }
+  getUpComing(){
+    return this.http.get<IMovieList>('https://api.themoviedb.org/3/movie/upcoming',options)
+  }
+  getTopRated(){
+    return this.http.get<IMovieList>('https://api.themoviedb.org/3/movie/top_rated',options)
+  }
+  getPopular(){
+    return this.http.get<IMovieList>('https://api.themoviedb.org/3/movie/popular',options)
   }
 }

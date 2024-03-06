@@ -5,23 +5,24 @@
 <div class="col-8 ps-5">
   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 </div>
-<div id="movieCarousel" class="carousel slide p-3" data-bs-ride="carousel">
-  <div class="carousel-inner">
+<div id="movieCarousel" class="carousel  p-3" data-bs-ride="carousel">
+  <div class="carousel-inner ">
     <div class="carousel-item active">
       <ul class="list-unstyled d-flex">
-        <li class="card ms-3" *ngFor="let movie of movieList.slice(0,3)">
+        <li class="card ms-3" *ngFor="let movie of movieList.slice(0,3); let i = index">
           <img [src]="getImageUrl(movie.poster_path)" class="card-img" alt="...">
-          <div class="card-text-overlay overlay-bg "><span class="text">1</span></div>
+          <div class="card-text-overlay overlay-bg "><span class="listId">{{ i+1 }}</span></div>
         </li>
       </ul>
     </div>
     <div class="carousel-item ">
       <ul class="list-unstyled d-flex">
-        <li class="card ms-3" *ngFor="let movie of movieList.slice(3,6)">
+        <li class="card ms-3" *ngFor="let movie of movieList.slice(3,6); let i = index">
           <img [src]="getImageUrl(movie.poster_path)" class="card-img" alt="...">
-          <div class="card-text-overlay overlay-bg "><span class="text">1</span></div>
+          <div class="card-text-overlay overlay-bg "><span class="listId">{{ i + 4 }}</span></div>
         </li>
       </ul>
     </div>
   </div>
 </div>
+
