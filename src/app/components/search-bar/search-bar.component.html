@@ -1,0 +1,61 @@
+<div class="p-5">
+    <div class="d-flex justify-content-between">
+        <div class="prev">
+            <i class="fa-solid fa-chevron-left fa-2xl prev"></i>
+        </div>
+        <div class="search">
+            <span class="searchText">Search</span>
+        </div>
+        <div class="info">
+            <i class="fa-solid fa-circle-exclamation fa-2xl exclamation"></i>
+        </div>
+    </div>
+    <div class="input-group mb-3 mt-5">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-append">
+            <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+        </div>
+    </div>
+    <div class="row" *ngFor="let list of movieList">
+        <div class="col">
+            <div class="card mb-3">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4 col-lg-4">
+                        <img [src]="getImageUrl(list.poster_path)" class="img-fluid rounded-start image">
+                    </div>
+                    <div class="col-md-8 col-sm-8 col-lg-8">
+                        <div class="card-body">
+                            <h4 class="text">{{list.title}}</h4>
+                            <div class="mt-2">
+                                <div class="row">
+                                    <div class="col-1">
+                                        <i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <div class="col p-0"><span class="rateText">{{list.vote_average}}</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <i class="fa-solid fa-ticket icon"></i>
+                                    </div>
+                                    <div class="col p-0"><span class="text">{{list.title}}</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <i class="fa-regular fa-calendar icon"></i>
+                                    </div>
+                                    <div class="col p-0"><span class="text">{{list.release_date}}</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <i class="fa-regular fa-clock icon"></i>
+                                    </div>
+                                    <div class="col p-0"><span class="text">139 minutes</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

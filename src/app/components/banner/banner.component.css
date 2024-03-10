@@ -22,3 +22,23 @@
   color: #1E1E1E;
 
 }
+.form-control{
+  background-color: #3A3F47;
+  border-color: #3A3F47;
+  border-radius: 15px;
+  height: 50px;
+}
+ ::placeholder{
+  color: grey !important;
+}
+.searchIcon{
+  position: relative;
+  top: 13px;
+  right: 35px;
+  color: grey;
+
+}
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select, .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+ border-top-right-radius: 15px !important;
+ border-bottom-right-radius: 15px !important;
+}

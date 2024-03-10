@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTabsModule } from '@angular/material/tabs';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { MatTabsModule } from '@angular/material/tabs';
     SearchComponent,
     DetailsComponent,
     BannerComponent,
-    MovieListComponent
+    MovieListComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule
 
   
   ],
